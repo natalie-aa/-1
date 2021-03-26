@@ -1,0 +1,340 @@
+@import "obnulen.scss";
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(29, 28, 28);
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	min-height: 100%;
+	margin: 0px auto;
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 1220px;
+	padding: 0 20px;
+	margin: 0px auto;
+}
+
+/*    Стили Шапки
+=======================*/
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	background-color: #eee;
+	border-bottom: 1px solid #6c7279;
+
+	&__body {
+		display: flex;
+		width: 100%;
+		height: 80px;
+		position: relative;
+		/*justify-content:center;*/
+		align-items: center;
+	}
+
+	&__nav-saitbar {
+		display: flex;
+		width: 100%;
+		height: 70px;
+		position: relative;
+		top: 0;
+		left: 0;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav-logo {
+		flex: 0 0 60px;
+		border-radius: 50%;
+		background-color: rgb(83, 78, 78);
+		overflow: hidden;
+		margin: 0 15px 0 0;
+	}
+	&__nav-logo img {
+		width: 60px;
+		height: 60px;
+	}
+}
+.nav-menu {
+	&__link {
+		font-family: "Raleway", sans-serif;
+		font-size: 15px;
+		font-weight: 700;
+		color: #6c7279;
+		padding: 0 30px;
+		opacity: 0.85;
+		transition: opacity 0.2s linear;
+	}
+	&__link:hover {
+		opacity: 1;
+	}
+	&__link:last-child {
+		padding: 0 0 0 30px;
+	}
+}
+/*======================*/
+
+/*               Стилт Формы   
+=========================================*/
+.form {
+	display: inline-block;
+	max-width: 550px;
+	height: 100%;
+	background-color: rgba(24, 23, 23, 0.555);
+	padding: 100px 50px;
+	margin: 0 auto;
+
+	&__body {
+		position: relative;
+	}
+	&__body::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(24, 23, 23, 0.014) url(../img/ZZ5H.gif) center / 50px no-repeat;
+		border-radius: 10px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease 0s;
+	}
+	&__body._sending::after {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/*_sending*/
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		margin: 0 0 30px 0;
+	}
+
+	&__item {
+		margin: 0 0 20px 0;
+	}
+
+	&__label {
+		font-size: 18px;
+		display: block;
+		margin: 0 0 10px 0;
+	}
+
+	&__input {
+		height: 50px;
+		width: 100%;
+		padding: 0 20px;
+		border-radius: 7px;
+		font-size: 18px;
+		transition: all 0.5s ease 0s;
+	}
+
+	&__input._error {
+		box-shadow: 0 0 15px rgb(247, 2, 2);
+	}
+
+	&__input:focus {
+		box-shadow: 0 0 15px rgb(5, 5, 92);
+	}
+	&__input-textarea {
+		width: 100%;
+		min-height: 120px;
+		border-radius: 7px;
+		resize: vertical;
+		padding: 20px;
+		transition: all 0.5s ease 0s;
+	}
+	&__input-textarea:focus {
+		box-shadow: 0 0 15px rgb(5, 5, 92);
+	}
+
+	&__button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 60px;
+		background-color: blue;
+		border-radius: 30px;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: 700;
+		color: #fff;
+		cursor: pointer;
+		box-shadow: 0 5px 0 rgb(5, 5, 92);
+		transition: background-color 0.5s ease 0s;
+		position: relative;
+		top: 0px;
+	}
+	&__button:hover {
+		background-color: rgb(5, 5, 155);
+		color: rgb(206, 202, 202);
+	}
+	&__button:active {
+		top: 3px;
+		box-shadow: 0 3px 0 rgb(5, 5, 92);
+	}
+}
+.form * {
+	outline: none;
+}
+
+.options {
+	padding: 10px 0 0 0;
+	&__item {
+		margin: 0 0 10px 0;
+	}
+	&__input {
+		display: none;
+	}
+	&__input:checked + &__label::after {
+		transform: scale(1);
+	}
+	&__label {
+		display: inline-flex;
+		font-size: 16px;
+		line-height: 140%;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+	}
+	&__label::before {
+		content: "";
+		align-self: flex-start;
+		flex: 0 0 24px;
+		height: 24px;
+		background-color: #fff;
+		border-radius: 50%;
+		margin: 0 10px 0 0;
+	}
+	&__label::after {
+		transition: transform 0.5s ease 0s;
+		content: "";
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		background-color: blue;
+		border-radius: 50%;
+		transform: scale(0);
+	}
+}
+.select {
+	padding: 0;
+}
+.file {
+	&__item {
+		position: relative;
+	}
+
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		font-size: 0px;
+		cursor: pointer;
+	}
+
+	&__button {
+		display: inline-flex;
+		min-height: 40px;
+		border-radius: 30px;
+		justify-content: center;
+		align-items: center;
+		background-color: blue;
+		padding: 0 20px;
+	}
+
+	&__preview {
+		display: flex;
+		max-width: 100px;
+		padding: 10px 0 0 0;
+	}
+	&__preview img {
+		max-width: 100%;
+	}
+}
+.checkbox {
+	&._error &__label::before {
+		box-shadow: 0 0 15px rgb(247, 2, 2);
+	}
+
+	&__input {
+		display: none;
+	}
+	&__input:checked + &__label::after {
+		transform: scale(1);
+	}
+	&__label {
+		display: inline-flex;
+		font-size: 16px;
+		line-height: 140%;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+	}
+	&__label::before {
+		align-self: flex-start;
+		content: "";
+		flex: 0 0 24px;
+		height: 24px;
+		background-color: #fff;
+		border-radius: 4px;
+		margin: 0 10px 0 0;
+	}
+	&__label::after {
+		transition: transform 0.5s ease 0s;
+		content: "";
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		background-color: blue;
+		border-radius: 4px;
+		transform: scale(0);
+	}
+	&__label a {
+		color: blue;
+	}
+}
+/*=========================================*/
+
+/*                   Стили Подвала  
+======================================================*/
+.footer {
+	background-color: #eee;
+	border-top: 1px solid #6c7279;
+	&__row {
+		display: flex;
+		width: 100%;
+		height: 80px;
+		justify-content: center;
+		align-items: center;
+	}
+	&__text {
+		font-family: "Raleway", sans-serif;
+		font-size: 30px;
+		color: #6c7279;
+	}
+}
+/*====================================================*/

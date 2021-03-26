@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Document</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<!-- Адаптивность  для компов и мобилок-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="content">
+
+
+
+			<header class="header">
+				<div class="container">
+					<div class="header__body">
+						<div class="header__nav-saitbar">
+							<div class="header__nav-logo">
+								<img c src="" alt="">
+							</div>
+							<div class="header__nav-menu">
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+								<a class="nav-menu__link" href="#">ссылка </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="form">
+				<form action="#" id="form" class="form__body">
+					<h1 class="form__title">Отправка данных на почту</h1>
+					<div class="form__item">
+						<label for="formName" class="form__label">Имя*:</label>
+						<input id="formName" type="text" name="name" class="form__input req">
+					</div>
+					<div class="form__item">
+						<label for="formEmail" class="form__label">E-mail*:</label>
+						<input id="formEmail" type="text" name="email" class="form__input req email">
+					</div>
+					<div class="form__item">
+						<div class="form__label">Левша или правша</div>
+						<div class="options">
+							<div class="options__item">
+								<input id="formRightHanded" checked type="radio" value="right" name="hand"
+									class="options__input">
+								<label id="formRightHanded" class="options__label"><span>Правша</span></label>
+							</div>
+							<div class="options__item">
+								<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input">
+								<label id="formLeftHanded" class="options__label"><span>Левша</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="form__item">
+						<label for="formMessage" class="form__label">Сообщение:</label>
+						<textarea name="message" id="formMessage" class="form__input-textarea"></textarea>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Возраст:</div>
+						<select name="age" class="select">
+							<option value="от 18 до 25" selected> Молодой</option>
+							<option value="от 25 до 35"> Средний</option>
+							<option value="от 35 до 45"> Старый</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Прикрепить фото:</div>
+						<div class="file">
+							<div class="file__item">
+								<input id="formImage" accept=".jpg , .png , .gif " type="file" name="image" class="file__input">
+								<div class="file__button">Выбрать</div>
+							</div>
+							<div id="formPreview" class="file__preview"></div>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="checkbox">
+							<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input req">
+							<label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку
+									персональных данных в соответствии с <a href="#"> Условиями</a>*</span></label>
+						</div>
+					</div>
+					<button type="submit" class="form__button">Отправить</button>
+				</form>
+			</div>
+
+
+
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__text">Подвал</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/form.js"></script>
+
+</body>
+
+</html>

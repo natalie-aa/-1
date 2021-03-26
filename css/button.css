@@ -1,0 +1,37 @@
+.button__button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  background-color: blue;
+  border-radius: 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 0 #05055c;
+          box-shadow: 0 5px 0 #05055c;
+  -webkit-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
+  position: relative;
+  top: 0px;
+}
+
+.button__button__button:hover {
+  background-color: #05059b;
+}
+
+.button__button__button:active {
+  top: 3px;
+  -webkit-box-shadow: 0 3px 0 #05055c;
+          box-shadow: 0 3px 0 #05055c;
+}

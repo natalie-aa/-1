@@ -1,0 +1,27 @@
+.button__button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60px;
+	background-color: blue;
+	border-radius: 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 0 5px 0 rgb(5, 5, 92);
+	transition: background-color 0.5s ease 0s;
+	position: relative;
+	top: 0px;
+
+	&__button:hover {
+		background-color: rgb(5, 5, 155);
+	}
+	&__button:active {
+		top: 3px;
+		box-shadow: 0 3px 0 rgb(5, 5, 92);
+	}
+}
